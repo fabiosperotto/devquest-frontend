@@ -1,0 +1,156 @@
+:root {
+  --bg: #0f0f1a;
+  --bg-card: #1a1a2e;
+  --roxo: #7c3aed;
+  --roxo-claro: #a78bfa;
+  --dourado: #fbbf24;
+  --verde: #34d399;
+  --texto: #e5e7eb;
+  --texto-fraco: #9ca3af;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1e1b3a, #0f0f1a 60%);
+  color: var(--texto);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.app { max-width: 1100px; margin: 0 auto; }
+
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.app-header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+}
+.app-header p { color: var(--texto-fraco); }
+
+.alerta-erro {
+  background: #7f1d1d;
+  border: 1px solid #ef4444;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.app-conteudo {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+}
+@media (max-width: 800px) {
+  .app-conteudo { grid-template-columns: 1fr; }
+}
+
+.hero-form {
+  background: var(--bg-card);
+  border: 1px solid #2e2e4d;
+  border-radius: 12px;
+  padding: 20px;
+  height: fit-content;
+}
+.hero-form h2 { margin-top: 0; color: var(--dourado); }
+
+.campo { margin-bottom: 16px; }
+.campo label { display: block; margin-bottom: 6px; font-size: 0.85rem; color: var(--texto-fraco); }
+.campo input, .campo select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #3a3a5c;
+  background: #12121f;
+  color: var(--texto);
+}
+
+.avatares { display: flex; gap: 8px; flex-wrap: wrap; }
+.avatar {
+  font-size: 1.3rem;
+  background: #12121f;
+  border: 1px solid #3a3a5c;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.avatar.selecionado { border-color: var(--roxo-claro); background: #2a1f4d; }
+
+.botao-primario, .botao-secundario, .botao-oraculo {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 8px;
+}
+.botao-primario { background: var(--roxo); color: white; }
+.botao-primario:hover { background: #6d28d9; }
+.botao-secundario { background: var(--verde); color: #052e1c; }
+.botao-oraculo { background: #312e81; color: var(--roxo-claro); }
+.botao-oraculo:hover { background: #3730a3; }
+
+.lista-herois h2 { color: var(--dourado); }
+
+.grade-herois {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.hero-card {
+  background: var(--bg-card);
+  border: 1px solid #2e2e4d;
+  border-radius: 12px;
+  padding: 16px;
+  position: relative;
+}
+
+.hero-card-topo { display: flex; align-items: center; gap: 10px; }
+.hero-avatar { font-size: 2rem; }
+.hero-card h3 { margin: 0; }
+.hero-classe { font-size: 0.75rem; color: var(--roxo-claro); }
+
+.botao-remover {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--texto-fraco);
+  cursor: pointer;
+  font-size: 1rem;
+}
+.botao-remover:hover { color: #ef4444; }
+
+.hero-stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 0.85rem;
+  color: var(--dourado);
+}
+
+.hero-skills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; min-height: 28px; }
+.skill-badge {
+  background: #12121f;
+  border: 1px solid #3a3a5c;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+}
+
+.vazio { color: var(--texto-fraco); font-size: 0.85rem; }
+
+.conselho-oraculo {
+  margin-top: 10px;
+  padding: 10px;
+  border-left: 3px solid var(--roxo-claro);
+  background: #14122a;
+  font-size: 0.85rem;
+  font-style: italic;
+}
