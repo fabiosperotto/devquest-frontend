@@ -63,6 +63,9 @@ O usuário cria um **Herói** (seu avatar de desenvolvedor) e vai **desbloqueand
 7. Acesse no navegador: [http://localhost:5173](http://localhost:5173)
 
 
+## Como contribuir
+Faça um fork do projeto. Crie uma branch e realize as suas contribuições. É obrigatório usar [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) nas descrições dos commits. Depois faça um pull request que será analisado. Não serão aceitos contribuições diretamente na branch main.
+
 
 ## Créditos e referências
 
